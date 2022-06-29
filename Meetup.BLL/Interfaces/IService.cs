@@ -1,4 +1,6 @@
-﻿public interface IService<T> where T : class
+﻿namespace Meetup.BLL.Interfaces;
+
+public interface IService<T> where T : class
 {
     Task<T> Create(T entity);
 

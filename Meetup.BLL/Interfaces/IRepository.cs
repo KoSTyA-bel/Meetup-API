@@ -1,4 +1,6 @@
-﻿public interface IRepository<T> where T : class
+﻿namespace Meetup.BLL.Interfaces;
+
+public interface IRepository<T> where T : class
 {
     Task<T?> GetById(int entityId);
 
