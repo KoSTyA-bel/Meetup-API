@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetup", "Meetup\Meetup.csproj", "{E4EA3FC6-531D-46EA-A224-55E87FD89FBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetup.BLL", "Meetup.BLL\Meetup.BLL.csproj", "{596CC673-18C8-4B22-B3EF-F2A40AE4E52D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetup.DLL", "Meetup.DLL\Meetup.DLL.csproj", "{08E905DB-F9A5-4CF9-A0E1-A32C12826E67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4EA3FC6-531D-46EA-A224-55E87FD89FBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4EA3FC6-531D-46EA-A224-55E87FD89FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4EA3FC6-531D-46EA-A224-55E87FD89FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4EA3FC6-531D-46EA-A224-55E87FD89FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{596CC673-18C8-4B22-B3EF-F2A40AE4E52D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596CC673-18C8-4B22-B3EF-F2A40AE4E52D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596CC673-18C8-4B22-B3EF-F2A40AE4E52D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596CC673-18C8-4B22-B3EF-F2A40AE4E52D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08E905DB-F9A5-4CF9-A0E1-A32C12826E67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E905DB-F9A5-4CF9-A0E1-A32C12826E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E905DB-F9A5-4CF9-A0E1-A32C12826E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E905DB-F9A5-4CF9-A0E1-A32C12826E67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
