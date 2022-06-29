@@ -8,7 +8,7 @@ public static class StringExtensions
 
         try
         {
-            date = DateTime.ParseExact(source, "yyyyMMdd HH:mm", null);
+            date = DateTime.ParseExact(source, "dd.MM.yyyy HH:mm:ss", null);
         }
         catch (FormatException e)
         {

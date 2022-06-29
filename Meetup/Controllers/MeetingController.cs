@@ -34,7 +34,7 @@ public class MeetingController : ControllerBase
             return NoContent();
         }
 
-        return Ok(meetings);
+        return Ok(this.mapper.Map<IEnumerable<MeetingViewModel>>(meetings));
     }
 
     [HttpGet]
@@ -48,7 +48,7 @@ public class MeetingController : ControllerBase
             return NotFound();
         }
 
-        return Ok(meeting);
+        return Ok(this.mapper.Map<MeetingViewModel>(meeting));
     }
 
     [HttpPost]
@@ -64,5 +64,36 @@ public class MeetingController : ControllerBase
         var added = await this.service.Create(meeting);
 
         return Ok(added.Id);
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> Update(MeetingViewModel model)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(model);
+        }
+
+        var meeting = this.mapper.Map<Meeting>(model);
+
+        await this.service.Update(meeting);
+
+        return Ok(this.mapper.Map<MeetingViewModel>(meeting));
+    }
+
+    [HttpDelete]
+    [Route("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var meeting = await this.service.GetById(id);
+
+        if (meeting is null)
+        {
+            return NotFound();
+        }
+
+        await this.service.Delete(meeting);
+
+        return Ok(id);
     }
 }
