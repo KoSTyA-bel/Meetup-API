@@ -3,9 +3,11 @@ using Meetup.BLL.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Meetup.Model;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Meetup.Controllers;
 
+[Authorize(AuthenticationSchemes = Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme)]
 [ApiController]
 [Route("api/[controller]")]
 public class MeetingController : ControllerBase
