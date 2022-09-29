@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Meetup.Controllers;
 
-[Authorize(AuthenticationSchemes = Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme)]
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class MeetingController : ControllerBase

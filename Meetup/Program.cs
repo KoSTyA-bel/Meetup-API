@@ -36,7 +36,7 @@ builder.Services.AddDbContext<MeetingContext>(options => options.UseSqlServer("S
 builder.Services.AddScoped<IRepository<Meeting>, MeetingRepository>();
 builder.Services.AddScoped<IService<Meeting>, MeetingService>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddTransient<IUserService, UserService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -53,6 +53,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<JWTMiddleware>();
 
 app.UseAuthorization();
 
